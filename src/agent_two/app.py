@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 
+from agent_two.config import settings
+
 app = FastAPI()
+app.state.settings = settings
 
 
 @app.get("/hello")
